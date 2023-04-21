@@ -237,17 +237,6 @@ window.onload = function () {
                 const buttonElement = document.getElementById(buttonElements[i]);
 
                 buttonElement.onclick = function () {
-                    let initialPage;
-                    if (location.hash === '') {
-                        initialPage = pages['home']['name'];
-                    } else {
-                        initialPage = location.hash.substring(1) + '-page';
-                    }
-                    if (location.hash !== '#' + key) {
-                        if (!(location.hash === '' && pages[key]['name'] === pages['home']['name'])) {
-                            animateToPage(initialPage, pages[key]['name'], pages[key]['target'], key, pages[key]['endRotation']);
-                        }
-                    }
                     location.hash = '#' + key;
                     return false;
                 }
@@ -343,5 +332,28 @@ function animate() {
 
     renderer.render(scene, camera);
 }
+
+// handle user clicking back button on browser
+
+let hashHistory = [window.location.hash]
+
+if (hashHistory[0] === '') {
+    hashHistory[0] = '#home';
+}
+
+window.onhashchange = function() {
+    hashHistory.push(window.location.hash);
+    console.log(hashHistory);
+    console.log('hash boi changed');
+
+    let previousPage = hashHistory[hashHistory.length - 2].substring(1) + '-page';
+    let currentPage = hashHistory[hashHistory.length - 1].substring(1) + '-page';
+    let key = hashHistory[hashHistory.length - 1].substring(1);
+
+    if (previousPage !== currentPage) {
+        animateToPage(previousPage, pages[key]['name'], pages[key]['target'], key, pages[key]['endRotation']);
+    }
+}
+
 
 animate();
