@@ -147,12 +147,12 @@ Array(200).fill(undefined, undefined, undefined).forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load("https://the-nova-system.github.io/extra-assets/space.jpg");
+const spaceTexture = new THREE.TextureLoader().load("https://2cousins.org/space.jpg");
 scene.background = spaceTexture;
 
 // Avatar
 
-const logoTexture = new THREE.TextureLoader().load("https://the-nova-system.github.io/extra-assets/logo.png");
+const logoTexture = new THREE.TextureLoader().load("https://2cousins.org/logo.png");
 
 const logo = new THREE.Mesh(
     new THREE.BoxGeometry(3, 3, 3),
