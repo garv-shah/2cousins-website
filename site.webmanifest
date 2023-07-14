@@ -1,6 +1,6 @@
 {
-    "name": "Nova System",
-    "short_name": "Nova System",
+    "name": "2cousins",
+    "short_name": "2cousins",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#011469",
-    "background_color": "#011469",
+    "theme_color": "#dde1ea",
+    "background_color": "#dde1ea",
     "display": "standalone"
 }
