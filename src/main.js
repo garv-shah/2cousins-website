@@ -9,7 +9,7 @@ let pages = {
   team: { name: 'team-page', buttons: ['team-button', 'team-button-text', 'team-button-footer'], target: { x: -10, y: -30, z: 18 } },
   home: {
     name: 'home-page',
-    buttons: ['home-button', 'home-button-footer'],
+    buttons: ['home-button', 'home-button-footer', 'home-logo'],
     target: { x: 0, y: 0, z: 0 },
     endRotation: new THREE.Euler(0, 0, 0, 'XYZ')
   },
