@@ -3,6 +3,11 @@ import * as THREE from "three";
 import { TWEEN } from 'three/examples/jsm/libs/tween.module.min'
 //import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
+if (window.location.hash.includes('#') && window.location.hash !== '#home') {
+  document.querySelector("#bg").style.animationDelay = "0s";
+  document.querySelector("#bg").style.animationDuration = "1s";
+}
+
 let pages = {
   donate: { name: 'donate-page', buttons: ['donate-button-text', 'donate-button-footer'], target: { x: 10, y: 30, z: -18 } },
   contact: { name: 'contact-page', buttons: ['contact-button', 'contact-button-text', 'contact-button-footer'], target: { x: 20, y: 25, z: -15 } },
